@@ -27,18 +27,21 @@ done
 
 MezPrint "Installing Oh My Zsh"
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -yy
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 
 MezPrint "Installing Zinit"
 
-sh -c "$(curl -fsSL https://git.io/zinit-install)" -yy
+sh -c "$(curl -fsSL https://git.io/zinit-install)" -yy  # Prompted again
 
 MezPrint "Adding plugins to Zinit"
 
 #add to /.zshrc
+echo "zinit light zsh-users/zsh-autosuggestions"
 echo "zinit light zsh-users/zsh-autosuggestions" >> /.zshrc
+echo "zinit light zsh-users/zsh-completions"
 echo "zinit light zsh-users/zsh-completions" >> /.zshrc
+echo "zinit light zdharma-continuum/fast-syntax-highlighting"
 echo "zinit light zdharma-continuum/fast-syntax-highlighting" >> /.zshrc
 
 #Nerd Fonts
@@ -51,6 +54,11 @@ fc-cache -fv
 #Install starhip or powerlevel10k?
 
 
+
+
+MezPrint "---------------Completed---------------"
+chsh -s $(which zsh)
+zsh
 
 #wget https://raw.githubusercontent.com/PaulMez/mezfigs/master/Ubuntu/.zshrc // Only if using my config?!?!?
 #may not overwrite?
