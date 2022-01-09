@@ -45,7 +45,6 @@ sed -i 's:plugins=(git):plugins=(git zsh-syntax-highlighting zsh-autosuggestions
 
 
 
-
 # Zinit not working as expected, resorted to zsh plugins
 # MezPrint "Installing Zinit"
 # sh -c "$(curl -fsSL https://git.io/zinit-install)" -yy  # Prompted
