@@ -1,5 +1,5 @@
 #!/bin/bash
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezInstall.sh)" 
+#bash -c "$(curl -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezInstall.sh)" 
 
 MezBack='\e[46;30m'
 reset='\e[0m'
