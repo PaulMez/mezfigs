@@ -1,5 +1,5 @@
 #!/bin/bash
-#bash -c "$(curl -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezInstall.sh)" 
+#bash -c "$(curl -H 'Cache-Control: no-cache' -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezInstall.sh)" 
 
 MezBack='\e[46;30m'
 reset='\e[0m'
@@ -29,6 +29,15 @@ MezPrint "Installing Oh My Zsh"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
+#Nerd Fonts
+MezPrint "Installing Nerd Fonts (FiraCode)"
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+unzip FiraCode.zip -d ~/.fonts
+rm FiraCode.zip
+fc-cache -fv
+
+
+#Install zinit, starhip or powerlevel10k?
 
 MezPrint "Installing Zinit"
 
@@ -44,21 +53,18 @@ echo "zinit light zsh-users/zsh-completions" >> /.zshrc
 echo "zinit light zdharma-continuum/fast-syntax-highlighting"
 echo "zinit light zdharma-continuum/fast-syntax-highlighting" >> /.zshrc
 
-#Nerd Fonts
-MezPrint "Installing Nerd Fonts (FiraCode)"
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
-unzip FiraCode.zip -d ~/.fonts
-rm FiraCode.zip
-fc-cache -fv
+MezPrint "Installing powerlevel10k"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
-#Install starhip or powerlevel10k?
+MezPrint "Swapping Oh My Zsh theme to powerlevel10k"
 
-
-
+sed -i 's/ZSH_THEME="gnzh"/ZSH_THEME="powerlevel10k/powerlevel10k"/g' ~/.zshrc
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k/powerlevel10k"/g' ~/.zshrc
 
 MezPrint "---------------Completed---------------"
 chsh -s $(which zsh)
 zsh
+p10k configure
 
 #wget https://raw.githubusercontent.com/PaulMez/mezfigs/master/Ubuntu/.zshrc // Only if using my config?!?!?
 #may not overwrite?
