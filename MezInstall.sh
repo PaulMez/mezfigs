@@ -1,6 +1,6 @@
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezInstall.sh?$RANDOM)" 
 RED='\033[38;5;004m'
-Bak='\033[38;5;015m'
+Bak='\033[48;5;015m'
 NC='\033[0m' # No Color
 printf "Testing ${RED}${BLU}colour${NC} with printf\n"
 echo "Testing ${BLU}colour${NC} with echo\n"
