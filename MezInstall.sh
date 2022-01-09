@@ -1,14 +1,14 @@
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezInstall.sh)" 
 RED='\033[38;5;004m'
-BLU='\033[38;5;006m'
+Bak='\033[38;5;015m'
 NC='\033[0m' # No Color
-printf "Testing ${RED}colour${NC} with printf\n"
+printf "Testing ${RED}${BLU}colour${NC} with printf\n"
 echo "Testing ${BLU}colour${NC} with echo\n"
 echo "\nInstalling Mez Configs.............\n"
 # sudo apt-get update -yy
 # sudo apt-get upgrade -yy
 echo "\nInstalling requirements.............\n"
-echo "\n${RED}1. wget:${NC}\n"
+echo "\n${RED}${BLU}1. wget:${NC}\n"
 sudo apt install wget -yy
 echo "\n2. zsh:\n"
 # sudo apt install zsh -yy
