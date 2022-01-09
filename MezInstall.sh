@@ -6,7 +6,7 @@ reset='\e[0m'
 
 
 MezPrint () {
-echo "${MezBack}\n[$1]${reset}\n"
+echo -e "${MezBack}\n[$1]${reset}\n"
 }
 
 
@@ -32,7 +32,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 MezPrint "Installing Zinit"
 
-sh -c "$(curl -fsSL https://git.io/zinit-install)" -yy  # Prompted again
+sh -c "$(curl -fsSL https://git.io/zinit-install)" -yy  # Prompted
 
 MezPrint "Adding plugins to Zinit"
 
