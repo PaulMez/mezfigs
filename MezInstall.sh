@@ -58,7 +58,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 MezPrint "Swapping Oh My Zsh theme to powerlevel10k"
 
-sed -i 's/ZSH_THEME="gnzh"/ZSH_THEME="powerlevel10k/powerlevel10k"/g' ~/.zshrc
+#sed -i 's/ZSH_THEME="gnzh"/ZSH_THEME="powerlevel10k/powerlevel10k"/g' ~/.zshrc
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k/powerlevel10k"/g' ~/.zshrc
 
 MezPrint "---------------Completed---------------"
