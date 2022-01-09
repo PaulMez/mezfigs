@@ -1,6 +1,6 @@
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezInstall.sh)" 
-RED='\033[38;5;033m'
-BLU='\033[38;5;045m'
+RED='\033[38;5;004m'
+BLU='\033[38;5;006m'
 NC='\033[0m' # No Color
 printf "Testing ${RED}colour${NC} with printf\n"
 echo "Testing ${BLU}colour${NC} with echo\n"
