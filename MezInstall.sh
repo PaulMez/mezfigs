@@ -54,15 +54,14 @@ echo "zinit light zdharma-continuum/fast-syntax-highlighting"
 echo "zinit light zdharma-continuum/fast-syntax-highlighting" >> /.zshrc
 
 MezPrint "Installing powerlevel10k"
-#git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+get clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+# echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 #MezPrint "Swapping Oh My Zsh theme to powerlevel10k"
 
 #sed -i 's/ZSH_THEME="gnzh"/ZSH_THEME="powerlevel10k/powerlevel10k"/g' ~/.zshrc
-#sed -i 's:robbyrussell:powerlevel10k/powerlevel10k:g' ~/.zshrc
+sed -i 's:robbyrussell:powerlevel10k/powerlevel10k:g' ~/.zshrc
 
 MezPrint "---------------Completed---------------"
 chsh -s $(which zsh)
