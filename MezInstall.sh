@@ -36,23 +36,26 @@ unzip FiraCode.zip -d ~/.fonts
 rm FiraCode.zip
 fc-cache -fv
 
+#Install general plugins
 
-#Install zinit, starhip or powerlevel10k?
+MezPrint "Installing Plugins for Zsh"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+sed -i 's:plugins=(git):plugins=(git zsh-syntax-highlighting zsh-autosuggestions):g' ~/.zshrc
 
-MezPrint "Installing Zinit"
 
-sh -c "$(curl -fsSL https://git.io/zinit-install)" -yy  # Prompted
 
-MezPrint "Adding plugins to Zinit"
 
-#add to /.zshrc
-echo "zinit light zsh-users/zsh-autosuggestions"
-echo "zinit light zsh-users/zsh-autosuggestions" >> /.zshrc
-echo "zinit light zsh-users/zsh-completions"
-echo "zinit light zsh-users/zsh-completions" >> /.zshrc
-echo "zinit light zdharma-continuum/fast-syntax-highlighting"
-echo "zinit light zdharma-continuum/fast-syntax-highlighting" >> /.zshrc
-
+# Zinit not working as expected, resorted to zsh plugins
+# MezPrint "Installing Zinit"
+# sh -c "$(curl -fsSL https://git.io/zinit-install)" -yy  # Prompted
+# MezPrint "Adding plugins to Zinit"
+# echo "zinit light zsh-users/zsh-autosuggestions"
+# echo "zinit light zsh-users/zsh-autosuggestions" >> ~/.zshrc
+# echo "zinit light zsh-users/zsh-completions"
+# echo "zinit light zsh-users/zsh-completions" >> ~/.zshrc
+# echo "zinit light zdharma-continuum/fast-syntax-highlighting"
+# echo "zinit light zdharma-continuum/fast-syntax-highlighting" >> ~/.zshrc
 #MezPrint "Installing MezConfigs for zsh"
 #wget https://raw.githubusercontent.com/PaulMez/mezfigs/master/Ubuntu/.zshrc // Only if using my config?!?!?
 #may not overwrite?
