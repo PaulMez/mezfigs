@@ -19,20 +19,18 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 sh -c "$(curl -fsSL https://git.io/zinit-install)"
 
-add to /.zshrc
-	zinit light zsh-users/zsh-autosuggestions
-	zinit light zsh-users/zsh-completions
-	zinit light zdharma-continuum/fast-syntax-highlighting
+#add to /.zshrc
+echo "zinit light zsh-users/zsh-autosuggestions" >> /.zshrc
+echo "zinit light zsh-users/zsh-completions" >> /.zshrc
+echo "zinit light zdharma-continuum/fast-syntax-highlighting" >> /.zshrc
 
-Nerd Fonts
+#Nerd Fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d ~/.fonts
 rm FiraCode.zip
 fc-cache -fv
 
-wget https://raw.githubusercontent.com/PaulMez/mezfigs/master/Ubuntu/.zshrc
-may not overwrite?
-
-
-???chsh -s $(which zsh)????
+#wget https://raw.githubusercontent.com/PaulMez/mezfigs/master/Ubuntu/.zshrc // Only if using my config?!?!?
+#may not overwrite?
+# ???chsh -s $(which zsh)????
 
