@@ -6,7 +6,7 @@ reset='\e[0m'
 
 
 MezPrint () {
-echo -e "${MezBack}\n[$1]${reset}\n"
+echo "${MezBack}\n[$1]${reset}\n"
 }
 
 
