@@ -54,7 +54,7 @@ echo "zinit light zdharma-continuum/fast-syntax-highlighting"
 echo "zinit light zdharma-continuum/fast-syntax-highlighting" >> /.zshrc
 
 MezPrint "Installing powerlevel10k"
-get clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 # echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
