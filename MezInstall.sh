@@ -53,6 +53,11 @@ echo "zinit light zsh-users/zsh-completions" >> /.zshrc
 echo "zinit light zdharma-continuum/fast-syntax-highlighting"
 echo "zinit light zdharma-continuum/fast-syntax-highlighting" >> /.zshrc
 
+#MezPrint "Installing MezConfigs for zsh"
+#wget https://raw.githubusercontent.com/PaulMez/mezfigs/master/Ubuntu/.zshrc // Only if using my config?!?!?
+#may not overwrite?
+
+
 MezPrint "Installing powerlevel10k"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
@@ -68,8 +73,7 @@ chsh -s $(which zsh)
 zsh
 p10k configure
 
-#wget https://raw.githubusercontent.com/PaulMez/mezfigs/master/Ubuntu/.zshrc // Only if using my config?!?!?
-#may not overwrite?
+
 # ???chsh -s $(which zsh)????
 
 
