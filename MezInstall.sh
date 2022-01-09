@@ -14,9 +14,6 @@ MezPrint "Installing Mez Configs"
 
 MezPrint "Installing Individual Requirements"
 
-echo -e "${MezBack}\n[Installing Mez Configs2]${reset}\n"
-
-
 declare -a Reqs=("wget" "zsh" "git" "unzip" "fontconfig" "screenfetch")
 arraylength=${#Reqs[@]}
 # Iterate the string array using for loop
