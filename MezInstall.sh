@@ -1,27 +1,40 @@
+#!/bin/bash
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezInstall.sh)" 
-Black='\033[0;30m'        # Black
-On_Cyan='\033[46m'        # Cyan BG
-Color_Off='\033[0m'       # Text Reset
-echo "${Black}${On_Cyan}\n[Installing Mez Configs]${Color_Off}\n"
-sudo apt-get update -yy
-sudo apt-get upgrade -yy
-echo "\nInstalling requirements\n"
-echo "\n1. wget:\n"
-sudo apt install wget -yy
-echo "\n2. zsh:\n"
-sudo apt install zsh -yy
-sudo apt install curl -yy
-sudo apt install git -yy
-sudo apt install unzip -yy
-sudo apt install fontconfig -yy
 
-sudo apt install screenfetch -yy
+MezBack='\e[46;30m'
+reset='\e[0m'
+
+
+MezPrint () {
+echo -e "${MezBack}\n[$1]${reset}\n"
+}
+
+
+MezPrint "Installing Mez Configs"
+
+MezPrint "Installing Individual Requirements"
+
+declare -a Reqs=("wget" "zsh" "git" "unzip" "fontconfig" "screenfetch")
+arraylength=${#Reqs[@]}
+# Iterate the string array using for loop
+
+
+for (( i=1; i<${arraylength}; i++ ));
+do
+  echo -e "${MezBack}$i. ${Reqs[$i]}${reset}"
+  eval "sudo apt install ${Reqs[$i]} -yy"
+done
+
+MezPrint "Installing Oh My Zsh"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -yy
 
 
+MezPrint "Installing Zinit"
 
 sh -c "$(curl -fsSL https://git.io/zinit-install)" -yy
+
+MezPrint "Adding plugins to Zinit"
 
 #add to /.zshrc
 echo "zinit light zsh-users/zsh-autosuggestions" >> /.zshrc
@@ -29,10 +42,15 @@ echo "zinit light zsh-users/zsh-completions" >> /.zshrc
 echo "zinit light zdharma-continuum/fast-syntax-highlighting" >> /.zshrc
 
 #Nerd Fonts
+MezPrint "Installing Nerd Fonts (FiraCode)"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
 unzip FiraCode.zip -d ~/.fonts
 rm FiraCode.zip
 fc-cache -fv
+
+#Install starhip or powerlevel10k?
+
+
 
 #wget https://raw.githubusercontent.com/PaulMez/mezfigs/master/Ubuntu/.zshrc // Only if using my config?!?!?
 #may not overwrite?
