@@ -1,4 +1,5 @@
 Dependicies
+Common Apps
 Aliases
 Starship - Cross-Shell Prompt
 zplug - A next-generation plugin manager for zsh
