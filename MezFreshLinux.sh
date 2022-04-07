@@ -1,4 +1,4 @@
-Dependicies
+Dependencies
 Common Apps
 Aliases
 Starship - Cross-Shell Prompt
