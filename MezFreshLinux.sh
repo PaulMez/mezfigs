@@ -1,6 +1,7 @@
 Dependencies
-Common Apps
+Common Apps + tmux + screenfetch
 Aliases
+Tmux configs/ shortcuts
 Starship - Cross-Shell Prompt
 zplug - A next-generation plugin manager for zsh
 zsh-completions - Additional completion definitions for Zsh.
