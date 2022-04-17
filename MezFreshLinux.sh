@@ -22,6 +22,7 @@
 
 
 MezBack='\e[46;30m'
+MezBackW='\e[37;30m'
 reset='\e[0m'
 
 MezPrint () {
@@ -29,13 +30,16 @@ echo -e "${MezBack}\n[$1]${reset}\n"
 }
 
 MezPrintCen () {
-echo -e "${MezBack}"
+echo -e "${MezBackW}"
 echo [$1] | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo -e "${reset}\n"
 }
 
 clear
-MezPrint "-----------------[Installing Mez Configs]-----------------"
-
+MezPrintCen "[----------------------]"
+MezPrintCen "[----------------------]"
+MezPrintCen "[Installing Mez Configs]"
+MezPrintCen "[----------------------]"
+MezPrintCen "[----------------------]"
 MezPrintCen "Installing Individual Requirements" 
 #echo "Some Other Text" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
