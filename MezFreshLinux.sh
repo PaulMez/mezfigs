@@ -23,10 +23,11 @@
 
 MezBack='\e[46;30m'
 MezBackW='\e[37;30m'
+MezBackCy='\e[36;40m'
 reset='\e[0m'
 
 MezPrint () {
-echo -e "${MezBack}\n[$1]${reset}\n"
+echo -e "${MezBackCy}\n[$1]${reset}\n"
 }
 
 MezPrintCen () {
@@ -42,4 +43,6 @@ MezPrintCen "[Installing Mez Configs]"
 MezPrintCen "[----------------------]"
 MezPrintCen "[----------------------]"
 MezPrintCen "Installing Individual Requirements" 
+
+MezPrint "Test Bluye"
 #echo "Some Other Text" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
