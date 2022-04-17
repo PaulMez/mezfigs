@@ -28,17 +28,9 @@ MezPrint () {
 echo -e "${MezBack}\n[$1]${reset}\n"
 }
 
-print_center(){
-    local x
-    local y
-    text="$*"
-    x=$(( ($(tput cols) - ${#text}) / 2))
-    echo -ne "\E[6n";read -sdR y; y=$(echo -ne "${y#*[}" | cut -d';' -f1)
-    echo -ne "\033[${y};${x}f$*"
-}
 
 clear
 MezPrint "-----------------[Installing Mez Configs]-----------------"
 
-print_center MezPrint "Installing Individual Requirements"
-print_center 'Hi'
+MezPrint "Installing Individual Requirements"
+echo "Some Text" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
