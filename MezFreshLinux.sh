@@ -33,5 +33,5 @@ echo -e "${MezBack}\n[$1]${reset}\n"
 clear
 MezPrint "-----------------[Installing Mez Configs]-----------------"
 
-MezPrint "Installing Individual Requirements"
+MezPrint "Installing Individual Requirements" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
 echo "Some Text" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
