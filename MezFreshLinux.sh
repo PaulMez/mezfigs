@@ -29,7 +29,9 @@ echo -e "${MezBack}\n[$1]${reset}\n"
 }
 
 MezPrintCen () {
-echo -e "${MezBack}\n[$1]${reset}\n" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo -e "${MezBack}"
+echo [$1] | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo -e "${reset}\n"
 }
 
 clear
