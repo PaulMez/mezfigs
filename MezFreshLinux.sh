@@ -1,3 +1,5 @@
+gitpod.io/#httpmyGITURL
+
 Dependencies
 Common Apps + tmux + screenfetch
 Aliases
