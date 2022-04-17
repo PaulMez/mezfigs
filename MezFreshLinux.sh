@@ -1,13 +1,40 @@
-gitpod.io/#httpmyGITURL
+#!/bin/bash
 
-Dependencies
-Common Apps + tmux + screenfetch
-Aliases
-Tmux configs/ shortcuts
-Starship - Cross-Shell Prompt
-zplug - A next-generation plugin manager for zsh
-zsh-completions - Additional completion definitions for Zsh.
-zsh-you-should-use - ZSH plugin that reminds you to use existing aliases for commands you just typed.
-zsh-history-substring-search - ZSH port of Fish history search (up arrow)
-zsh-completions - Additional completion definitions for Zsh.
-zsh-autosuggestions - Fish-like autosuggestions for Zsh.
+#//gitpod.io/#httpmyGITURL
+
+#SUDO Version
+
+#sudo apt-get install curl -yy; bash -c "$(curl -H 'Cache-Control: no-cache' -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezFreshLinux.sh)"
+
+
+# Dependencies
+# Common Apps + tmux + screenfetch
+# Aliases
+# Tmux configs/ shortcuts
+# Starship - Cross-Shell Prompt
+# zplug - A next-generation plugin manager for zsh
+# zsh-completions - Additional completion definitions for Zsh.
+# zsh-you-should-use - ZSH plugin that reminds you to use existing aliases for commands you just typed.
+# zsh-history-substring-search - ZSH port of Fish history search (up arrow)
+# zsh-completions - Additional completion definitions for Zsh.
+# zsh-autosuggestions - Fish-like autosuggestions for Zsh.
+
+
+
+MezBack='\e[46;30m'
+reset='\e[0m'
+
+MezPrint () {
+echo -e "${MezBack}\n[$1]${reset}\n"
+}
+clear
+MezPrint "-----------------[Installing Mez Configs]-----------------"
+
+BAR='####################'   # this is full bar, e.g. 20 chars
+
+for i in {1..20}; do
+    echo -ne "\r${BAR:0:$i}" # print $i chars of $BAR from 0 position
+    sleep .1                 # wait 100ms between "frames"
+done
+
+MezPrint "Installing Individual Requirements"
