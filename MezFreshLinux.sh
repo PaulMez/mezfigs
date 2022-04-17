@@ -30,7 +30,7 @@ echo -e "${MezBack}\n[$1]${reset}\n"
 clear
 MezPrint "-----------------[Installing Mez Configs]-----------------"
 
-BAR='####################'   # this is full bar, e.g. 20 chars
+BAR='[##########################################################]'   # this is full bar, e.g. 20 chars
 
 for i in {1..20}; do
     echo -ne "\r${BAR:0:$i}" # print $i chars of $BAR from 0 position
