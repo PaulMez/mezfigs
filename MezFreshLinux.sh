@@ -41,3 +41,4 @@ clear
 MezPrint "-----------------[Installing Mez Configs]-----------------"
 
 print_center MezPrint "Installing Individual Requirements"
+print_center 'Hi'
