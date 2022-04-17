@@ -4,7 +4,7 @@
 
 #SUDO Version
 
-#paste|| sudo apt-get install curl -yy; bash -c "$(curl -H 'Cache-Control: no-cache' -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezFreshLinux.sh)"
+#paste|| sudo apt install curl -yy; bash -c "$(curl -H 'Cache-Control: no-cache' -fsSL https://raw.githubusercontent.com/PaulMez/mezfigs/master/MezFreshLinux.sh)"
 
 #perfect prompt
 #https://raw.githubusercontent.com/b4b4r07/screenshots/master/zplug/demo.gif
@@ -67,7 +67,7 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 # zplug - A next-generation plugin manager for zsh
 MezPrint "Installing Zplug & adding plugins"
-$ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # zsh-completions - Additional completion definitions for Zsh.
 # zsh-you-should-use - ZSH plugin that reminds you to use existing aliases for commands you just typed.
@@ -76,4 +76,5 @@ $ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/inst
 # zsh-autosuggestions - Fish-like autosuggestions for Zsh.
 
 #Config P10k
-p10k configure
+#zsh
+#p10k configure
