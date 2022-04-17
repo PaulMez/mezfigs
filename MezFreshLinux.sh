@@ -31,17 +31,28 @@ echo -e "${reset}\n"
 
 #intro
 clear
-MezPrintCen "[----------------------]"
+MezPrintCen "[--------------------------------------------]"
 MezPrintCen "[Installing Mez Configs]"
-MezPrintCen "[----------------------]"
-MezPrintCen "Installing Individual Requirements" 
+MezPrintCen "[--------------------------------------------]"
+MezPrint "Installing Individual Requirements" 
 
 
 # Dependencies & Common Apps
 declare -a Reqs=("wget" "zsh" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux")
 arraylength=${#Reqs[@]}
 
+for (( i=1; i<${arraylength}; i++ ));
+do
+  echo -e "${MezBack}$i. ${Reqs[$i]}${reset}"
+  eval "sudo apt install ${Reqs[$i]} -yy"
+done
 
+#Nerd Fonts
+MezPrint "Installing Nerd Fonts (FiraCode)"
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+unzip FiraCode.zip -d ~/.fonts
+rm FiraCode.zip
+fc-cache -fv
 
 # Aliases
 # Tmux configs/ shortcuts
