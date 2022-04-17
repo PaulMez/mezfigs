@@ -29,6 +29,7 @@ echo -e "${MezBack}\n[$1]${reset}\n"
 }
 
 
+
 clear
 MezPrint "-----------------[Installing Mez Configs]-----------------"
 
