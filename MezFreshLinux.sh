@@ -39,7 +39,7 @@ MezPrint "Installing Individual Requirements"
 
 
 # Dependencies & Common Apps
-declare -a Reqs=("wget" "zsh" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "awk")
+declare -a Reqs=("wget" "zsh" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "mawk")
 arraylength=${#Reqs[@]}
 
 for (( i=1; i<${arraylength}; i++ ));
@@ -59,12 +59,14 @@ fc-cache -fv
 
 # Tmux configs/ shortcuts
 
-#Powerlevel10k (and config if prompted)
+#Powerlevel10k
+MezPrint "Installing Powerlevel10k"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 
 # zplug - A next-generation plugin manager for zsh
+MezPrint "Installing Zplug & adding plugins"
 $ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # zsh-completions - Additional completion definitions for Zsh.
