@@ -28,10 +28,12 @@ MezPrint () {
 echo -e "${MezBack}\n[$1]${reset}\n"
 }
 
-
+MezPrintCen () {
+echo -e "${MezBack}\n[$1]${reset}\n" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+}
 
 clear
 MezPrint "-----------------[Installing Mez Configs]-----------------"
 
-MezPrint "Installing Individual Requirements" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+MezPrintCen "Installing Individual Requirements" 
 #echo "Some Other Text" | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
