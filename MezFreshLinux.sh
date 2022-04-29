@@ -9,8 +9,9 @@
 #perfect prompt
 #https://raw.githubusercontent.com/b4b4r07/screenshots/master/zplug/demo.gif
 
-# Add promp to install configs/alias only?
-
+# TO DO
+#Add promp to install configs/alias only?
+# If one fails, pause/continue?
 
 #functions
 MezBack='\e[46;30m'
