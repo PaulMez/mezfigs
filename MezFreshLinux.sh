@@ -9,7 +9,7 @@
 #perfect prompt
 #https://raw.githubusercontent.com/b4b4r07/screenshots/master/zplug/demo.gif
 
-
+# Add promp to install configs/alias only?
 
 
 #functions
@@ -37,6 +37,8 @@ MezPrintCen "[Installing Mez Configs]"
 MezPrintCen "[--------------------------------------------]"
 MezPrint "Installing Individual Requirements" 
 
+#update first
+sudo apt-get update
 
 # Dependencies & Common Apps
 declare -a Reqs=("wget" "zsh" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "mawk")
@@ -56,8 +58,10 @@ rm FiraCode.zip
 fc-cache -fv
 
 # Aliases
+#Copy alias from alias config file hosted on same repo
 
 # Tmux configs/ shortcuts
+#Copy tmux configs from file hosted on same repo
 
 #Powerlevel10k
 MezPrint "Installing Powerlevel10k"
