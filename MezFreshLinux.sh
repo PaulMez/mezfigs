@@ -39,10 +39,11 @@ MezPrintCen "[--------------------------------------------]"
 MezPrint "Installing Individual Requirements" 
 
 #update first
+MezPrint "Updating apt"
 sudo apt-get update
 
 # Dependencies & Common Apps
-declare -a Reqs=("wget" "zsh" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "mawk")
+declare -a Reqs=("wget" "zsh" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "gawk" "htop")
 arraylength=${#Reqs[@]}
 
 for (( i=0; i<${arraylength}; i++ ));
@@ -72,7 +73,7 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 # zplug - A next-generation plugin manager for zsh
 MezPrint "Installing Zplug & adding plugins"
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh #maybe dont initiate zsh yet?
 
 # zsh-completions - Additional completion definitions for Zsh.
 # zsh-you-should-use - ZSH plugin that reminds you to use existing aliases for commands you just typed.
