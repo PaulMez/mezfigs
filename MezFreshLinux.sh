@@ -45,7 +45,7 @@ sudo apt-get update
 declare -a Reqs=("wget" "zsh" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "mawk")
 arraylength=${#Reqs[@]}
 
-for (( i=1; i<${arraylength}; i++ ));
+for (( i=0; i<${arraylength}; i++ ));
 do
   echo -e "${MezBack}$i. ${Reqs[$i]}${reset}"
   eval "sudo apt install ${Reqs[$i]} -yy"
