@@ -89,10 +89,15 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 # # zsh-you-should-use - ZSH plugin that reminds you to use existing aliases for commands you just typed.
 # # zsh-history-substring-search - ZSH port of Fish history search (up arrow)
 # # zsh-completions - Additional completion definitions for Zsh.
-# # zsh-autosuggestions - Fish-like autosuggestions for Zsh.
+# # zsh-autosuggestions - Fish-like autosuggestions for Zsh. marlonrichert/zsh-autocomplete
 # #Make zsh default
 # chsh -s /usr/bin/zsh
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 
+#add following to .zshrc
+nano .zshrc
+zinit load marlonrichert/zsh-autocomplete
+zinit load MichaelAquilina/zsh-you-should-use
 
 # #Config P10k
 # #zsh
