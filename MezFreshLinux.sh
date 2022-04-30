@@ -76,24 +76,31 @@ MezPrint "Installing Zplug & adding plugins"
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh #maybe dont initiate zsh yet?
 
 
-#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-# My ~/.zshrc contains the following:
+# #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# # My ~/.zshrc contains the following:
 
-# if [ -f ${HOME}/.zplug/init.zsh ]; then
-#     source ${HOME}/.zplug/init.zsh
-# fi
+# # if [ -f ${HOME}/.zplug/init.zsh ]; then
+# #     source ${HOME}/.zplug/init.zsh
+# # fi
 
-/.zplug/init.zsh
+# /.zplug/init.zsh
 
-# zsh-completions - Additional completion definitions for Zsh.
-# zsh-you-should-use - ZSH plugin that reminds you to use existing aliases for commands you just typed.
-# zsh-history-substring-search - ZSH port of Fish history search (up arrow)
-# zsh-completions - Additional completion definitions for Zsh.
-# zsh-autosuggestions - Fish-like autosuggestions for Zsh.
-#Make zsh default
-chsh -s /usr/bin/zsh
+# # zsh-completions - Additional completion definitions for Zsh.
+# # zsh-you-should-use - ZSH plugin that reminds you to use existing aliases for commands you just typed.
+# # zsh-history-substring-search - ZSH port of Fish history search (up arrow)
+# # zsh-completions - Additional completion definitions for Zsh.
+# # zsh-autosuggestions - Fish-like autosuggestions for Zsh.
+# #Make zsh default
+# chsh -s /usr/bin/zsh
 
 
-#Config P10k
-#zsh
-#p10k configure | n | Y | Y | 3 | 1 | 3 | 1 | 1 | 1 | 1 | 3 | 1 | Y | 1 | Y
+# #Config P10k
+# #zsh
+# #p10k configure | n | Y | Y | 3 | 1 | 3 | 1 | 1 | 1 | 1 | 3 | 1 | Y | 1 | Y
+
+
+# #Katoolin (optional)
+# sudo su
+# git clone https://github.com/LionSec/katoolin.git && cp katoolin/katoolin.py /usr/bin/katoolin
+# chmod +x /usr/bin/katoolin
+# sudo katoolin
