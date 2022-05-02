@@ -1,0 +1,29 @@
+TABS
+CTRL + B | C     	Create new tab
+CTRL + B | 0-9   	Switch to tab
+CTRL + B | ,     	Rename tab
+CTRL + B | L    	Last tab toggle
+CTRL + B | W    	Tab window
+CTRL + B | &   	  	Kill tab
+
+PANES
+CTRL + B | %   	 	Side by Side Split
+CTRL + B | "     	Top / Bottom Split
+CTRL + B | SPC   	Toggle Pane Layouts
+CTRL + B | Arr   	Select Pane Layouts
+CTRL + B | O     	Cycle Pane Selection
+CTRL + B | Q     	Show Pane Index
+CTRL + B | Q + # 	Select Pane By Index
+CTRL + B | Z     	Zoom Selected Pane (Toggle)
+CTRL + B | X     	Closes Select Pane
+CTRL + B | CTRL + Arr   Resizes Pane
+
+SESSIONS
+tmux ls  |              List Sessions
+CTRL + B | D   	 	Detach Session
+tmux rename-session -tX new-name | Name Session
+
+MISC
+CTRL + B | I 		Install Plugins
+CTRL + B | alt + U 	Uninstall Plugins
+CTRL + B | U 		Update Plugins
