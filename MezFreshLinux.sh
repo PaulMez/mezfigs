@@ -43,7 +43,7 @@ MezPrint "Updating apt"
 sudo apt-get update
 
 # Dependencies & Common Apps
-declare -a Reqs=("wget" "zsh" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "gawk" "htop")
+declare -a Reqs=("wget" "zsh" "curl" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "gawk" "htop")
 arraylength=${#Reqs[@]}
 
 for (( i=0; i<${arraylength}; i++ ));
@@ -64,11 +64,8 @@ fc-cache -fv
 
 # Tmux configs/ shortcuts
 #Copy tmux configs from file hosted on same repo
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-#Powerlevel10k
-MezPrint "Installing Powerlevel10k"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 
 # # zplug - A next-generation plugin manager for zsh   or maybe use ZINIT?
@@ -82,13 +79,18 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 # # zsh-completions - Additional completion definitions for Zsh.
 # # zsh-autosuggestions - Fish-like autosuggestions for Zsh. marlonrichert/zsh-autocomplete
 
-bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
+#Install ZINIT
+MezPrint "Installing ZINIT & adding plugins"
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)" -y
 
 #add following to .zshrc
 nano .zshrc
-zinit load marlonrichert/zsh-autocomplete
+#zinit load marlonrichert/zsh-autocomplete
+#zstyle ':autocomplete:*' min-input 1
 zinit load MichaelAquilina/zsh-you-should-use
-
+zinit load zsh-users/zsh-autosuggestions
+zinit load b4b4r07/enhancd
+zinit load zsh-users/zsh-syntax-highlighting #Must be last
 # #Config P10k
 # #zsh
 # #p10k configure | n | Y | Y | 3 | 1 | 3 | 1 | 1 | 1 | 1 | 3 | 1 | Y | 1 | Y
@@ -96,6 +98,10 @@ zinit load MichaelAquilina/zsh-you-should-use
 # #Make zsh default
 # chsh -s /usr/bin/zsh
 
+#Powerlevel10k
+MezPrint "Installing Powerlevel10k"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 # #Katoolin (optional)
 # sudo su
