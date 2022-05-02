@@ -69,6 +69,7 @@ tmux source-file ~/.tmux.conf
 prefix + I - - insatall tpm themes
 
 
+
 # # zplug - A next-generation plugin manager for zsh   or maybe use ZINIT?
 # MezPrint "Installing Zplug & adding plugins"
 # curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh #maybe dont initiate zsh yet?
