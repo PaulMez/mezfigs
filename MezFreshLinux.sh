@@ -65,7 +65,8 @@ fc-cache -fv
 # Tmux configs/ shortcuts
 #Copy tmux configs from file hosted on same repo
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
+tmux source-file ~/.tmux.conf 
+prefix + I - - insatall tpm themes
 
 
 # # zplug - A next-generation plugin manager for zsh   or maybe use ZINIT?
