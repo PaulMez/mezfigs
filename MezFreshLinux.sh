@@ -61,7 +61,7 @@ fc-cache -fv
 
 # Aliases
 #Copy alias from alias config file hosted on same repo
-
+Add cheat sheet for Alias/Tmux to shortcut in alias
 # Tmux configs/ shortcuts
 #Copy tmux configs from file hosted on same repo
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
