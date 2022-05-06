@@ -61,9 +61,13 @@ fc-cache -fv
 
 # Aliases
 #Copy alias from alias config file hosted on same repo
-Add cheat sheet for Alias/Tmux to shortcut in alias
+#Add cheat sheet for Alias/Tmux to shortcut in alias
+
+
+
 # Tmux configs/ shortcuts
 #Copy tmux configs from file hosted on same repo
+MezPrint "Installing TPM (Tmux Plugins)"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source-file ~/.tmux.conf 
 prefix + I - - insatall tpm themes
@@ -110,3 +114,5 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 # git clone https://github.com/LionSec/katoolin.git && cp katoolin/katoolin.py /usr/bin/katoolin
 # chmod +x /usr/bin/katoolin
 # sudo katoolin
+
+# Add Progress Bar on bottom
