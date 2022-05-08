@@ -116,3 +116,11 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 # sudo katoolin
 
 # Add Progress Bar on bottom
+
+00:40 - Exa
+01:36 - Bat
+02:06 - Ripgrep
+04:08 - FZF
+05:20 - Zoxide
+06:42 - Entr
+07:17 - Midnight Commander
