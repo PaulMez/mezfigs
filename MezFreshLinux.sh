@@ -63,27 +63,17 @@ fc-cache -fv
 #Copy alias from alias config file hosted on same repo
 #Add cheat sheet for Alias/Tmux to shortcut in alias
 
-
+############################################################ Not Automated from below
+MezPrint "Exiting due to unfinished"
+exit 
 
 # Tmux configs/ shortcuts
 #Copy tmux configs from file hosted on same repo
 MezPrint "Installing TPM (Tmux Plugins)"
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source-file ~/.tmux.conf 
-prefix + I - - insatall tpm themes
+prefix + I - - install tpm themes
 
-
-
-# # zplug - A next-generation plugin manager for zsh   or maybe use ZINIT?
-# MezPrint "Installing Zplug & adding plugins"
-# curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh #maybe dont initiate zsh yet?
-
-
-# # zsh-completions - Additional completion definitions for Zsh.
-# # zsh-you-should-use - ZSH plugin that reminds you to use existing aliases for commands you just typed.
-# # zsh-history-substring-search - ZSH port of Fish history search (up arrow)
-# # zsh-completions - Additional completion definitions for Zsh.
-# # zsh-autosuggestions - Fish-like autosuggestions for Zsh. marlonrichert/zsh-autocomplete
 
 #Install ZINIT
 MezPrint "Installing ZINIT & adding plugins"
