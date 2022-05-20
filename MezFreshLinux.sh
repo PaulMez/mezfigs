@@ -59,14 +59,18 @@ unzip FiraCode.zip -d ~/.fonts
 rm FiraCode.zip
 fc-cache -fv
 
+
+############################################################ Not Automated from below
+MezPrint "Exiting due to unfinished"
+exit 
+
+
 # Aliases
 #Copy alias from alias config file hosted on same repo
 #Add cheat sheet for Alias/Tmux to shortcut in alias
 
 
-############################################################ Not Automated from below
-MezPrint "Exiting due to unfinished"
-exit 
+
 
 # Tmux configs/ shortcuts
 #Copy tmux configs from file hosted on same repo
