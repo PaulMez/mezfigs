@@ -43,7 +43,7 @@ MezPrint "Updating apt"
 sudo apt-get update
 
 # Dependencies & Common Apps
-declare -a Reqs=("wget" "zsh" "curl" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "gawk" "htop" "rmlint" "ncdu")
+declare -a Reqs=("wget" "zsh" "curl" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "gawk" "htop" "rmlint" "ncdu" "btop")
 arraylength=${#Reqs[@]}
 
 for (( i=0; i<${arraylength}; i++ ));
