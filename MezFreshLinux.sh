@@ -61,8 +61,8 @@ fc-cache -fv
 
 
 ############################################################ Not Automated from below
-MezPrint "Exiting due to unfinished"
-exit 
+# MezPrint "Exiting due to unfinished"
+# exit 
 
 
 # Aliases
@@ -74,10 +74,10 @@ exit
 
 # Tmux configs/ shortcuts
 #Copy tmux configs from file hosted on same repo
-MezPrint "Installing TPM (Tmux Plugins)"
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-tmux source-file ~/.tmux.conf 
-prefix + I - - install tpm themes
+# MezPrint "Installing TPM (Tmux Plugins)"
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# tmux source-file ~/.tmux.conf 
+# prefix + I - - install tpm themes
 
 
 #Install ZINIT
@@ -97,7 +97,7 @@ zinit load zsh-users/zsh-syntax-highlighting #Must be last
 # #p10k configure | n | Y | Y | 3 | 1 | 3 | 1 | 1 | 1 | 1 | 3 | 1 | Y | 1 | Y
 
 # #Make zsh default
-# chsh -s /usr/bin/zsh
+chsh -s /usr/bin/zsh
 
 #Powerlevel10k
 MezPrint "Installing Powerlevel10k"
@@ -112,10 +112,3 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 # Add Progress Bar on bottom
 
-00:40 - Exa
-01:36 - Bat
-02:06 - Ripgrep
-04:08 - FZF
-05:20 - Zoxide
-06:42 - Entr
-07:17 - Midnight Commander
