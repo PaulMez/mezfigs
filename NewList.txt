@@ -7,6 +7,11 @@ Homebrew
 ZSH
 FZF
 ATUIN history better
+bash <(curl https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh)
+atuin import auto
+echo 'eval "$(atuin init zsh)"' >> ~/.zshrc
+
+
 DUST HHDD SPACE
 BTOP
 BAT (beter CAT)
