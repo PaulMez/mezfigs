@@ -91,6 +91,7 @@ nano .zshrc
 zinit load MichaelAquilina/zsh-you-should-use
 zinit load zsh-users/zsh-autosuggestions
 zinit load b4b4r07/enhancd
+zinit snippet OMZP::history
 zinit load zsh-users/zsh-syntax-highlighting #Must be last
 # #Config P10k
 # #zsh
