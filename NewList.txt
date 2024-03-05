@@ -1,0 +1,12 @@
+MezInstall
+
+
+Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+FZF
+ATUIN history better
+DUST HHDD SPACE
+BTOP
+BAT (beter CAT)
+ZELLIJ
