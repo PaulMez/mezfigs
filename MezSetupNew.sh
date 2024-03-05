@@ -11,3 +11,6 @@ echo -e "${MezBack}\n[$1]${reset}\n"
 }
 
 MezPrint "Installing Mez Configs"
+
+
+MezPrint "Installing Individual Requirements"
