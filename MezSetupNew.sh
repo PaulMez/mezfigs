@@ -20,7 +20,7 @@ echo -e "${reset}\n"
 #intro
 clear
 MezPrintCen "[--------------------------------------------]"
-MezPrintCen "[Installing Mez Configs]"
+MezPrintCen "[Installing Mez Configs (Linux Env Only!)]"
 MezPrintCen "[--------------------------------------------]"
 MezPrint "Installing Individual Requirements" 
 
@@ -29,7 +29,7 @@ MezPrint "Updating apt"
 #sudo apt-get update
 
 # Dependencies & Common Apps
-declare -a Reqs=("wget" "zsh" "curl" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "gawk" "htop" "rmlint" "ncdu" "gdu" "btop" "bat" "ranger" "fzf" "ZELLIJ" "dust")
+declare -a Reqs=("wget" "zsh" "curl" "git" "unzip" "fontconfig" "screenfetch" "cmatrix" "tmux" "gawk" "htop" "rmlint" "ncdu" "gdu" "btop" "bat" "ranger" "fzf")
 arraylength=${#Reqs[@]}
 
 for (( i=0; i<${arraylength}; i++ ));
@@ -38,13 +38,21 @@ do
   eval "sudo apt install ${Reqs[$i]} -yy"
 done
 
+
+#back up zshrc
+cp ~/.zshrc ~/.zshrc.backup.$(date +%Y%m%d_%H%M%S)
+
 #Setup zsh
+
+
+zshrc="$HOME/.zshrc"
+
 
 #zsh plugins
 # Define the list of desired plugins
 desired_plugins=("aws" "git" "docker" "zsh-you-should-use" "zsh-autosuggestions" "zsh-syntax-highlighting")
 # The path to the .zshrc file
-zshrc="$HOME/.zshrc"
+
 # Check if .zshrc exists
 if [ ! -f "$zshrc" ]; then
     echo ".zshrc file not found!"
@@ -67,5 +75,58 @@ fi
 echo "Your .zshrc plugins have been updated."
 
 #alias 
+# alias ll='ls -lahG'
+# alias tt="cd ~/aws/tinytales/"
+# alias ttf="cd ~/aws/tinytales/tinytales_frontend/"
+# alias ttb="cd ~/aws/tinytales/tinytales_backend"
+# alias MezTu_ssh="ssh meztu@192.168.1.41"
+# alias MezTop_ssh="ssh meza@192.168.1.2"
+# alias p3=python3
+# alias cat="catbat"
+# alias cat_orig="cat"
+  
 
 #alias to swap out cat for bat, etc and suggest
+
+#zsh functions
+
+
+# Function to be added
+gitcap_function="function gitcap() {
+  git add . && git commit -m \"\$1\" && git push
+}"
+
+
+# Check if the function gitcap() already exists
+if grep -q "function gitcap()" "$zshrc"; then
+    echo "The gitcap() function already exists in .zshrc."
+else
+    # If the function does not exist, add it to .zshrc
+    echo "$gitcap_function" >> "$zshrc"
+    echo "The gitcap() function has been added to .zshrc."
+fi
+
+
+top_function="top() {
+    read -p "Would you like to use btop instead? (Y/n): " answer
+    answer=${answer:-Y} # Default to Y if no input is given
+    
+    case $answer in
+        [Nn]* ) command top;;
+        * ) command btop;;
+    esac
+}
+"
+
+if grep -q "function top()" "$zshrc"; then
+    echo "The top() function already exists in .zshrc."
+else
+    # If the function does not exist, add it to .zshrc
+    echo "$top_function" >> "$zshrc"
+    echo "The top() function has been added to .zshrc."
+fi
+
+#zellij
+# homebrew 
+# brew install zellij
+# dust
