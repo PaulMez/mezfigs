@@ -26,4 +26,4 @@ MezPrint "Installing Individual Requirements"
 
 #update first
 MezPrint "Updating apt"
-sudo apt-get update
+#sudo apt-get update
